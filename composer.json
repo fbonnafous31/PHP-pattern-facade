@@ -1,0 +1,11 @@
+{
+    "name": "bonnafous/facade",
+    "description": "Design pattern façade - exemple de gestion d'un Home Cinéma (tiré du livre Design Pattern - Head First)",
+    "authors": [
+        {
+            "name": "François Bonnafous",
+            "email": "francois.bonnafous@hotmail.fr"
+        }
+    ],
+    "require": {}
+}
