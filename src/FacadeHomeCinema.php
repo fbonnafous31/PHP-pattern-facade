@@ -12,6 +12,7 @@
         public \App\Lumieres        $lumieres;
         public \App\Ecran           $ecran;
         public \App\MachineAPopCorn $machineAPopcorn; 
+        public string               $film;
 
         public function __construct( 
             \App\Amplificateur      $amplificateur,
@@ -35,6 +36,7 @@
 
         public function regarderFilm (string $film, string $dvd) {
             echo "Vous allez regarder un bon film ... <br>";
+            $this->film = $film;
             $this->machineAPopcorn->marche();
             $this->machineAPopcorn->eclater();
             $this->lumieres->attenuer(10);
@@ -49,14 +51,14 @@
             $this->dvd->jouer($film);
         }
 
-        public function arreterFilm(string $film) {
+        public function arreterFilm() {
             echo "C'est la fin du film ... <br>";
             $this->machineAPopcorn->arret();
             $this->lumieres->marche();
             $this->ecran->monter();
             $this->projecteur->arret();
             $this->amplificateur->arret();
-            $this->dvd->stop($film);
+            $this->dvd->stop($this->film);
             $this->dvd->ejecter();
             $this->dvd->arret();
         }

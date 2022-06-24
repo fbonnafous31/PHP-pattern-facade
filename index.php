@@ -16,6 +16,6 @@
     $homeCinema  = new App\FacadeHomeCinema($amplificateur, $tuner, $dvd, $cd, $projecteur, $lumieres, $ecran, $machineAPopcorn);
     $homeCinema->regarderFilm("Titanic", "Lecteur de DVD de salon");
     echo "<br><br>";
-    $homeCinema->arreterFilm("Titanic");
+    $homeCinema->arreterFilm();
 
 ?>
